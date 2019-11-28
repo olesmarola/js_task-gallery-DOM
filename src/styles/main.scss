@@ -16,21 +16,34 @@ body {
     display: flex;
     list-style-type: none;
     padding: 0;
+    margin: 5px;
     justify-content: center;
     flex-wrap: wrap;
+  }
+
+  &__img,
+  &__large-img {
+    padding: 2px;
+    border: 1px solid #e5e5e5;
   }
 
   &__img {
     width: 100px;
     height: 100px;
-    padding: 0 10px;
+    margin: 0 2px;
+
+    &:hover {
+      border: 1px solid #a4bbc1;
+      box-shadow: 2px 2px 5px 0 rgba(164, 187, 193, 0.5);
+    }
   }
 
   &__large-img {
-    width: 400px;
-    height: 300px;
-    object-fit: contain;
+    width: 545px;
+    height: 400px;
+    object-fit: cover;
     margin: 0 auto;
+    box-sizing: border-box;
   }
 }
 
