@@ -3,6 +3,7 @@
 // eslint-disable-next-line no-shadow
 function changeImg(event) {
   const img = event.target.closest('img');
+  const link = event.target.closest('a');
 
   if (!img || !list.contains(img)) {
     return;
@@ -10,8 +11,8 @@ function changeImg(event) {
 
   const largeImg = document.querySelector('.gallery__large-img');
 
-  largeImg.src = img.src.replace('-thumb.jpeg', '.png');
-  largeImg.alt = img.alt;
+  largeImg.src = link.href;
+  largeImg.alt = link.title;
   event.preventDefault();
 }
 
